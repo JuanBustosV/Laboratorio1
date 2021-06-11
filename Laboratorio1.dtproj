@@ -26,12 +26,13 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">XONE</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAk56aOhkPv0ihXUlNNnqoKgAAAAACAAAAAAAQZgAAAAEAACAAAAAlBzw5mmjKJrHJcOK/GF5nmo2vbWS1pjY4FJoZh/oMVwAAAAAOgAAAAAIAACAAAABRcP4e7UScbu3zdbitIc5D7EvRxR9m3inoMlrexSdccpAAAACmqSKnoVcm5071icl/PSDqdPZSv++izNWHfafmOaL4f12Fu30h5qWHg9EcZoJsiIaBT8BlorvlnHjIKVr1Tj0o95sdYMAL1jlShd/GfIPt0DAryARrzr3pCfqBM/0dvFhsT/boXxb0q7YQOZAVbvcLQfSdnFuQcCi7LbMAZGDRsjUawUJ5d0en6e6IPnwOU6BAAAAAjIZjHeztecH4ZXGOUr1UBCXDOObD0RiLofPE6c5VW1E9D/IHgqtvphVfhW6XbH9W6lo+zbU0LI37AOHL28KSvg==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAk56aOhkPv0ihXUlNNnqoKgAAAAACAAAAAAAQZgAAAAEAACAAAADu80zlIAyiZYR3WbCWPAK4wSUejC9eYoOooriBv0KD8wAAAAAOgAAAAAIAACAAAAAM4EtVCcd1ZYrUxX/+JJEWCdZ4qcIbaZqCfdOz4DpvS5AAAADuerPGulhOJVKk8QnyyMtD/BTnq6x8Yf/mN0d6sI6sVcnphz0UKVvVUubbHMSFu7mZd+FlFR+M8OmTqgiVS6JogOm1pbUnC0Ow7zVQabn687aLENqHbLLRT7flCP2OcKxuq5vkolDZtr8b/19GQD5vhpTI19sCQQTKt3K2aShkcBGzrqlcWk8zwCljn4382ZZAAAAAiDQ3rJNeoD9KPKv20FHIYlXjAz6oTkq53I4iZFsKfW09+GmRrHqjXDCjlMQs8/no0Qhoe6d/7BLZA/vZvr6ELA==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
           <SSIS:Package SSIS:Name="Tarea Ejecutar SQL.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Tarea Flujo Datos.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Tarea de Expresion.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers />
         <SSIS:DeploymentInfo>
@@ -210,10 +211,10 @@
                 <SSIS:Property SSIS:Name="Name">Tarea Flujo Datos</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">3</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{4A4B0896-6550-468C-9D34-49A0FD585532}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{BB82F89D-4B6E-461C-BEB6-5AA9FF4D8C8C}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -278,21 +279,6 @@
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Value">false</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
-                  </SSIS:Properties>
-                </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.Reporte Cliente.ConnectionString">
-                  <SSIS:Properties>
-                    <SSIS:Property SSIS:Name="ID">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="CreationName">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="Description">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">G:\SQLServer\SQL Server Integration Server\Reporte Cliente.txt</SSIS:Property>
-                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
                 <SSIS:Parameter SSIS:Name="CM.Reporte Cliente.DataRowsToSkip">
@@ -382,6 +368,8 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">
+                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -565,6 +553,23 @@
                   </SSIS:Properties>
                 </SSIS:Parameter>
               </SSIS:Parameters>
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Tarea de Expresion.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{D68BAA93-2300-4C2C-A779-795D26B83466}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Package1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{3469C4F7-A6AF-403E-A757-7F08D9ED56AE}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
             </SSIS:PackageMetaData>
           </SSIS:PackageInfo>
         </SSIS:DeploymentInfo>
